@@ -1,7 +1,7 @@
-package com.genie.Ecomm.repo;
+package com.lakshyakumrawat.Ecomm.repo;
 
-import com.genie.Ecomm.model.Orders;
-import com.genie.Ecomm.model.User;
+import com.lakshyakumrawat.Ecomm.model.Orders;
+import com.lakshyakumrawat.Ecomm.model.User;
 import org.aspectj.weaver.ast.Or;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

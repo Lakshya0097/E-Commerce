@@ -1,4 +1,4 @@
-package com.genie.Ecomm.dto;
+package com.lakshyakumrawat.Ecomm.dto;
 
 import java.util.Date;
 import java.util.List;

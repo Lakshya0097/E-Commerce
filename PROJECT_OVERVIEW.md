@@ -11,7 +11,7 @@ The repository is structured into two main components: a Spring Boot backend (`E
 ```
 E-commerce/
 ├── Ecomm/                     # Spring Boot Java Backend
-│   ├── src/main/java/com/genie/Ecomm/
+│   ├── src/main/java/com/lakshyakumrawat/Ecomm/
 │   │   ├── controller/        # REST APIs (User, Product, Order)
 │   │   ├── dto/               # Data Transfer Objects (OrderDTO, OrderItemDTO)
 │   │   ├── model/             # JPA Entities & Request Objects (User, Product, Orders, OrderItem, OrderRequest)
@@ -167,7 +167,7 @@ While the project has a solid framework, there are critical gaps and architectur
 | :--- | :--- | :--- | :--- |
 | **Broken Checkout Flow** | The "Proceed To Payment" button on `cart.html` calls `checkout()`, which is **not implemented** in [cart.js](file:///D:/E-commerce/Ecomm-UI/js/cart.js). Orders cannot be placed from the frontend. | **Critical** | Implement `checkout()` in `cart.js` to serialize the cart, get the active user ID, and send a `POST` request to `/orders/place/{userId}`. |
 | **Missing User Session** | The frontend has no registration, login page, or session management (`localStorage` / cookies) to store a logged-in user. The backend requires a `userId` to place orders. | **High** | Create sign-up/login pages. Store the logged-in user ID/profile in `localStorage` upon success. |
-| **Plaintext Password Storage** | User passwords are saved and compared in **plaintext** (`user.getPassword().equals(password)`) inside [UserService.java](file:///D:/E-commerce/Ecomm/src/main/java/com/genie/Ecomm/service/UserService.java). | **High** | Introduce a password hashing library (e.g., BCrypt via Spring Security) before saving/verifying credentials. |
+| **Plaintext Password Storage** | User passwords are saved and compared in **plaintext** (`user.getPassword().equals(password)`) inside [UserService.java](file:///D:/E-commerce/Ecomm/src/main/java/com/lakshyakumrawat/Ecomm/service/UserService.java). | **High** | Introduce a password hashing library (e.g., BCrypt via Spring Security) before saving/verifying credentials. |
 | **Permissive CORS** | Backend controllers use `@CrossOrigin("*")` which exposes the application to security vulnerabilities like CSRF. | **Medium** | Restrict the allowed CORS origin to specific origins (e.g., `http://localhost:5500` or wherever the frontend runs). |
 | **Lack of Exception Handling** | If a product or user is not found, the service throws a `RuntimeException`, causing a generic 500 error response without user-friendly messages. | **Medium** | Create a `@ControllerAdvice` global exception handler to map exceptions to proper HTTP status codes and payloads. |
 | **Static Images Path** | The homepage banners and products point to `img/img1.png`, etc., which must exist locally on the frontend server. | **Low** | Ensure image files exist or integrate an image hosting service / mock URLs. |

@@ -1,4 +1,4 @@
-package com.genie.Ecomm.model;
+package com.lakshyakumrawat.Ecomm.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

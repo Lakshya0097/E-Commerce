@@ -1,6 +1,6 @@
-package com.genie.Ecomm.repo;
+package com.lakshyakumrawat.Ecomm.repo;
 
-import com.genie.Ecomm.model.User;
+import com.lakshyakumrawat.Ecomm.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User,Long> {

@@ -1,4 +1,4 @@
-package com.genie.Ecomm.util;
+package com.lakshyakumrawat.Ecomm.util;
 
 import org.mindrot.jbcrypt.BCrypt;
 

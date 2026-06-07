@@ -1,8 +1,8 @@
-package com.genie.Ecomm.service;
+package com.lakshyakumrawat.Ecomm.service;
 
-import com.genie.Ecomm.model.User;
-import com.genie.Ecomm.repo.UserRepository;
-import com.genie.Ecomm.util.HashUtils;
+import com.lakshyakumrawat.Ecomm.model.User;
+import com.lakshyakumrawat.Ecomm.repo.UserRepository;
+import com.lakshyakumrawat.Ecomm.util.HashUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

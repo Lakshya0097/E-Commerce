@@ -1,4 +1,4 @@
-package com.genie.Ecomm.model;
+package com.lakshyakumrawat.Ecomm.model;
 
 import java.util.Map;
 

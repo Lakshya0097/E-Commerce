@@ -1,8 +1,8 @@
-package com.genie.Ecomm.controller;
+package com.lakshyakumrawat.Ecomm.controller;
 
 
-import com.genie.Ecomm.model.User;
-import com.genie.Ecomm.service.UserService;
+import com.lakshyakumrawat.Ecomm.model.User;
+import com.lakshyakumrawat.Ecomm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

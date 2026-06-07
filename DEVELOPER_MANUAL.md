@@ -88,11 +88,11 @@ erDiagram
 
 ### 3.1 Backend: Utilities & Security
 
-#### **[HashUtils.java](file:///D:/E-commerce/Ecomm/src/main/java/com/genie/Ecomm/util/HashUtils.java)**
+#### **[HashUtils.java](file:///D:/E-commerce/Ecomm/src/main/java/com/lakshyakumrawat/Ecomm/util/HashUtils.java)**
 Handles password encryption and matching using the BCrypt algorithm.
 
 ```java
-package com.genie.Ecomm.util;
+package com.lakshyakumrawat.Ecomm.util;
 
 import org.mindrot.jbcrypt.BCrypt; // 1
 
@@ -135,7 +135,7 @@ public class HashUtils {
 
 ### 3.2 Backend: Authentication & User Service
 
-#### **[UserService.java](file:///D:/E-commerce/Ecomm/src/main/java/com/genie/Ecomm/service/UserService.java)**
+#### **[UserService.java](file:///D:/E-commerce/Ecomm/src/main/java/com/lakshyakumrawat/Ecomm/service/UserService.java)**
 Performs user signup and password checks during login.
 
 ```java
@@ -173,7 +173,7 @@ public User loginUser(String email, String password) {
 3. **Success**: Returns the matched User object.
 4. **Failure**: Returns `null` if credentials are wrong or the email is not found.
 
-#### **[UserController.java](file:///D:/E-commerce/Ecomm/src/main/java/com/genie/Ecomm/controller/UserController.java)**
+#### **[UserController.java](file:///D:/E-commerce/Ecomm/src/main/java/com/lakshyakumrawat/Ecomm/controller/UserController.java)**
 Exposes API endpoints to the frontend, mapping exceptions to HTTP error status codes.
 
 ```java
@@ -198,7 +198,7 @@ public ResponseEntity<?> registerUser(@RequestBody User user) {
 
 ### 3.3 Backend: Order Processing
 
-#### **[OrderService.java](file:///D:/E-commerce/Ecomm/src/main/java/com/genie/Ecomm/service/OrderService.java)**
+#### **[OrderService.java](file:///D:/E-commerce/Ecomm/src/main/java/com/lakshyakumrawat/Ecomm/service/OrderService.java)**
 Maintains transaction logic: places order details, links items, and queries histories.
 
 ```java

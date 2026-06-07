@@ -1,9 +1,9 @@
-package com.genie.Ecomm.controller;
+package com.lakshyakumrawat.Ecomm.controller;
 
-import com.genie.Ecomm.dto.OrderDTO;
-import com.genie.Ecomm.model.OrderItem;
-import com.genie.Ecomm.model.OrderRequest;
-import com.genie.Ecomm.service.OrderService;
+import com.lakshyakumrawat.Ecomm.dto.OrderDTO;
+import com.lakshyakumrawat.Ecomm.model.OrderItem;
+import com.lakshyakumrawat.Ecomm.model.OrderRequest;
+import com.lakshyakumrawat.Ecomm.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.bind.annotation.*;

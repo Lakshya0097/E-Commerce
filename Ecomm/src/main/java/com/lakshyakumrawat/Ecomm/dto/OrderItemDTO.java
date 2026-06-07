@@ -1,4 +1,4 @@
-package com.genie.Ecomm.dto;
+package com.lakshyakumrawat.Ecomm.dto;
 
 public class OrderItemDTO {
 

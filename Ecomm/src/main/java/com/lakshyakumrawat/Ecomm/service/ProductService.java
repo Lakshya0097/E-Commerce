@@ -1,7 +1,7 @@
-package com.genie.Ecomm.service;
+package com.lakshyakumrawat.Ecomm.service;
 
-import com.genie.Ecomm.model.Product;
-import com.genie.Ecomm.repo.ProductRepository;
+import com.lakshyakumrawat.Ecomm.model.Product;
+import com.lakshyakumrawat.Ecomm.repo.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

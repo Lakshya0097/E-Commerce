@@ -8,7 +8,7 @@
 		<version>3.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.genie</groupId>
+	<groupId>com.lakshyakumrawat</groupId>
 	<artifactId>Ecomm</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Ecomm</name>
