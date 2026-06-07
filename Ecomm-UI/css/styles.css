@@ -1,15 +1,26 @@
 /* =======================
    Global Theme Colors
    ======================= */
-   :root {
-    --primary-color: #ff6600; /* Vibrant Orange */
-    --secondary-color: #111; /* Dark Gray Background */
-    --text-color: #ddd; /* Light Text */
-    --footer-text: #ccc; /* Footer Text (Improved) */
-    --hover-color: #ff8533; /* Lighter Orange */
-    --white: #fff; /* White Text */
-    --navbar-bg: #222; /* Slightly lighter for navbar */
-  }
+:root {
+  --primary-color: #ff6600; /* Vibrant Orange */
+  --secondary-color: #111; /* Dark Gray Background */
+  --text-color: #ddd; /* Light Text */
+  --footer-text: #ccc; /* Footer Text (Improved) */
+  --hover-color: #ff8533; /* Lighter Orange */
+  --white: #fff; /* White Text */
+  --navbar-bg: #222; /* Slightly lighter for navbar */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #151515 !important;
+  color: var(--text-color) !important;
+  padding-top: 85px !important;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
   
   /* =======================
        Navbar Styling (Fixed)
@@ -121,12 +132,13 @@
   .card-img-top {
     transition: transform 0.3s ease-in-out;
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
+    background-color: #1c1c1c;
   }
   
   .card:hover .card-img-top {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   
   /* Add to Cart Button */
@@ -194,4 +206,46 @@
     margin-top: 20px;
     font-size: 12px;
     color: var(--footer-text);
+  }
+
+  /* =======================
+     Premium Custom Features
+     ======================= */
+
+  /* Active Option for Size/Color/Storage */
+  .active-option {
+    background-color: var(--primary-color) !important;
+    color: var(--white) !important;
+    border-color: var(--primary-color) !important;
+  }
+
+  /* Toast Notification Override */
+  #toast-container .toast {
+    background: rgba(30, 30, 30, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 102, 0, 0.15) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+  }
+  
+  #toast-container .toast.bg-success {
+    border-left: 4px solid #198754 !important;
+  }
+  
+  #toast-container .toast.bg-danger {
+    border-left: 4px solid #dc3545 !important;
+  }
+
+  /* Dropdown styling matching custom dark theme */
+  .dropdown-menu-dark {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333 !important;
+  }
+  
+  .dropdown-item {
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--white) !important;
   }

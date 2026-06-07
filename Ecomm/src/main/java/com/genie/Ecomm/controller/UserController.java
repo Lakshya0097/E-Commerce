@@ -18,16 +18,28 @@ public class UserController {
 
 
     @PostMapping("/register")
-    public User registerUser(@RequestBody User user)
+    public org.springframework.http.ResponseEntity<?> registerUser(@RequestBody User user)
     {
-        return userService.registerUser(user);
+        User registered = userService.registerUser(user);
+        if (registered == null) {
+            return org.springframework.http.ResponseEntity
+                .status(org.springframework.http.HttpStatus.BAD_REQUEST)
+                .body(java.util.Map.of("error", "Registration failed. Email might already be registered."));
+        }
+        return org.springframework.http.ResponseEntity.ok(registered);
     }
 
 
     @PostMapping("/login")
-    public User loginUser(@RequestBody User user)
+    public org.springframework.http.ResponseEntity<?> loginUser(@RequestBody User user)
     {
-        return userService.loginUser(user.getEmail(),user.getPassword());
+        User loggedIn = userService.loginUser(user.getEmail(), user.getPassword());
+        if (loggedIn == null) {
+            return org.springframework.http.ResponseEntity
+                .status(org.springframework.http.HttpStatus.UNAUTHORIZED)
+                .body(java.util.Map.of("error", "Invalid email or password."));
+        }
+        return org.springframework.http.ResponseEntity.ok(loggedIn);
     }
 
     @GetMapping
