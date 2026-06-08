@@ -1,4 +1,4 @@
-const CART_BASE_URL = "http://localhost:8080";
+const CART_BASE_URL = "https://shoplane-api.onrender.com";
 
 function loadCart() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];

@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "https://shoplane-api.onrender.com";
 let allProducts = []; // Global cache for real-time search
 
 async function loadProducts() {
