@@ -39,8 +39,8 @@ function renderProducts(productList) {
     productList.forEach((product) => {
         let productCard = `
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100 shadow-sm" style="cursor: pointer; border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s;" onclick="openProductDetailModal(${product.id}, '${product.name.replace(/'/g, "\\'")}', ${product.price}, '${product.imageUrl}', '${product.description.replace(/'/g, "\\'")}', '${product.category}')">
-                    <div style="overflow: hidden; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+                <div class="card h-100 shadow-sm" style="cursor: pointer;" onclick="openProductDetailModal(${product.id}, '${product.name.replace(/'/g, "\\'")}', ${product.price}, '${product.imageUrl}', '${product.description.replace(/'/g, "\\'")}', '${product.category}')">
+                    <div style="overflow: hidden; border-top-left-radius: 15px; border-top-right-radius: 15px;">
                         <img src="${product.imageUrl}" class="card-img-top" alt="${product.name}">
                     </div>
                     <div class="card-body d-flex flex-column p-4">

@@ -21,6 +21,16 @@ body {
   padding-top: 85px !important;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
+
+/* Global Muted Text Override for High Contrast Dark Mode */
+.text-muted {
+  color: #a5a5a5 !important;
+}
+
+/* Global opacity text override for improved readability */
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
   
   /* =======================
        Navbar Styling (Fixed)
@@ -106,56 +116,120 @@ body {
   .section-title {
     text-align: center;
     font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
     color: var(--primary-color);
+    letter-spacing: 0.5px;
   }
   
-  /* Product Cards */
+  /* Product Cards - Elevated Dark Mode Design */
+  /* Product Cards - Elevated Dark Mode Design */
   .card {
-    transition: all 0.3s ease-in-out;
-    border: none;
-    border-radius: 10px;
-    background: var(--secondary-color);
-    color: var(--text-color);
-    box-shadow: 0px 4px 8px rgba(255, 102, 0, 0.2); /* Adds slight orange glow */
+    --bs-card-bg: #1e1e1e !important;
+    --bs-card-color: var(--text-color) !important;
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    background: #1e1e1e !important; /* Elevated card background for better layering */
+    color: var(--text-color) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     overflow: hidden;
     position: relative;
   }
   
   .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 10px 15px rgba(255, 102, 0, 0.3);
+    transform: translateY(-8px);
+    border-color: rgba(255, 102, 0, 0.45) !important; /* Subtle primary color border on hover */
+    box-shadow: 0 12px 24px rgba(255, 102, 0, 0.18), 0 8px 30px rgba(0, 0, 0, 0.6);
   }
   
-  /* Product Image */
+  /* Product Image with Zoom Effect */
   .card-img-top {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     width: 100%;
     height: 250px;
     object-fit: cover;
-    background-color: #1c1c1c;
+    background-color: #151515;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
   }
   
   .card:hover .card-img-top {
-    transform: scale(1.05);
+    transform: scale(1.06);
   }
   
-  /* Add to Cart Button */
+  /* Product card text elements for readability and high contrast */
+  .card-title {
+    color: var(--white) !important;
+    font-weight: 700;
+    line-height: 1.4;
+    transition: color 0.3s;
+  }
+  
+  .card:hover .card-title {
+    color: var(--hover-color) !important;
+  }
+
+  .card-text.text-muted,
+  .card .card-text {
+    color: #dcdcdc !important; /* High contrast bright grey (WCAG AAA compliant) for card description */
+    font-weight: 400;
+    font-size: 13.5px !important;
+  }
+
+  /* Pricing color highlight */
+  .card .price,
+  .modal-body .price {
+    color: #ffb300 !important; /* Bright amber warning yellow for clear price visibility */
+    font-weight: 700;
+  }
+
+  /* Modal description contrast override */
+  .modal-content .text-muted {
+    color: #dcdcdc !important; /* Ensure description/labels in product detail modal have high contrast */
+  }
+  
+  /* Add to Cart Button - Premium Pill Design with high contrast text */
   .btn-primary {
-    background: var(--primary-color);
-    border: none;
-    opacity: 0.9;
-    transition: all 0.3s ease-in-out;
+    background: var(--primary-color) !important;
+    border: none !important;
+    color: #111111 !important; /* High contrast black/dark-gray text on orange background */
+    font-weight: 700 !important;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.2);
   }
   
   .card:hover .btn-primary {
-    opacity: 1;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 102, 0, 0.35);
   }
   
   .btn-primary:hover {
-    background: var(--hover-color);
+    background: var(--hover-color) !important;
+    color: #000000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.45);
+  }
+
+  /* Premium Success Button - High Contrast & Shadow */
+  .btn-success {
+    background-color: #198754 !important;
+    border: none !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    padding: 10px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(25, 135, 84, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  }
+  
+  .btn-success:hover {
+    background-color: #1e9e62 !important; /* Slightly brighter, vibrant green on hover */
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(30, 158, 98, 0.4);
   }
   
   /* =======================
@@ -248,4 +322,18 @@ body {
   .dropdown-item:hover {
     background-color: var(--primary-color) !important;
     color: var(--white) !important;
+  }
+
+  /* Cart Badge Notification Style */
+  .cart-badge {
+    background-color: var(--primary-color);
+    color: #111111 !important; /* High contrast dark text on orange badge */
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 20px;
+    position: relative;
+    top: -8px;
+    left: -4px;
+    box-shadow: 0 2px 5px rgba(255, 102, 0, 0.4);
   }
